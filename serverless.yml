@@ -28,13 +28,13 @@ functions:
     handler: handler.createPost
     events:
       - http:
-          path: /communityReport
+          path: /Community/AddCommunity
           method: post
   getAllPosts:
     handler: handler.getAllPosts
     events:
       - http:
-          path: /communityReports
+          path: /Community/GetAll
           method: get
   getPosts:
     handler: handler.getPosts
@@ -65,13 +65,13 @@ functions:
     handler: handler.createTraveler
     events:
       - http:
-          path: /travelerReport
+          path: /Travllers/AddTravler
           method: post
   getAllTravelers:
     handler: handler.getAllTravelers
     events:
       - http:
-          path: /travelerReports
+          path: /Travllers/GetAll
           method: get
   getTravelers:
     handler: handler.getTravelers

@@ -23,7 +23,7 @@ module.exports.createPost = (event, context, callback) => {
   const reqBody = JSON.parse(event.body)
 
   const post = {
-    uuid: uuid(),
+    id: uuid(),
     ...reqBody
   }
 
@@ -71,7 +71,7 @@ module.exports.getPost = (event, context, callback) => {
 
   const params = {
     Key: {
-      ID: id
+      id: id
     },
     TableName: postsTable
   }
@@ -93,7 +93,7 @@ module.exports.updatePost = (event, context, callback) => {
 
   const params = {
     Key: {
-      ID: id
+      id: id
     },
     TableName: postsTable,
     ConditionExpression: 'attribute_exists(id)',
@@ -120,7 +120,7 @@ module.exports.deletePost = (event, context, callback) => {
   const id = event.pathParameters.id
   const params = {
     Key: {
-      ID: id
+      id: id
     },
     TableName: postsTable
   }
@@ -139,7 +139,7 @@ module.exports.createTraveler = (event, context, callback) => {
   const reqBody = JSON.parse(event.body)
 
   const post = {
-    uuid: uuid(),
+    id: uuid(),
     ...reqBody
   }
 
@@ -187,7 +187,7 @@ module.exports.getTraveler = (event, context, callback) => {
 
   const params = {
     Key: {
-      ID: id
+      id: id
     },
     TableName: travelersTable
   }
@@ -209,7 +209,7 @@ module.exports.updateTraveler = (event, context, callback) => {
 
   const params = {
     Key: {
-      ID: id
+      id: id
     },
     TableName: travelersTable,
     ConditionExpression: 'attribute_exists(id)',
@@ -236,7 +236,7 @@ module.exports.deleteTraveler = (event, context, callback) => {
   const id = event.pathParameters.id
   const params = {
     Key: {
-      ID: id
+      id: id
     },
     TableName: travelersTable
   }
